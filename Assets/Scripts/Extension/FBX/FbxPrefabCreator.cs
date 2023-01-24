@@ -34,10 +34,8 @@ public class FBXPrefabCreator  {
             savePath
         );
 
-        // 保存パスが不正だったら処理しない
-        if (string.IsNullOrEmpty(savePath)) {
-            throw new System.Exception("Path to save is invalid.");
-        }
+        // 保存パスが存在しない場合は、処理しない
+        if (string.IsNullOrEmpty(savePath)) throw new System.Exception("Path to save is invalid.");
 
         // Prefabのインスタンスを作成
         var tempInstance = GameObject.Instantiate(sourceFBX);
