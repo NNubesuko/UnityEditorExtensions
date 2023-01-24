@@ -58,6 +58,8 @@ public class FBXPrefabCreator  {
             savePath,
             InteractionMode.AutomatedAction
         );
+
+        // 一時的に配置されたインスタンスの削除
         GameObject.DestroyImmediate(tempInstance);
     }
 
